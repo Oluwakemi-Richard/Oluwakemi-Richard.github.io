@@ -1,102 +1,86 @@
-<!DOCTYPE <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Oluwakemi Calculator</title>
+    <title>Password reset confirmation</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css">
     <style>
-        #calculator_container{
-            position:relative;
-            width:400px;
-            border: 1px solid black;
-            border-radius: 10px;
-            margin: auto;
-            padding: 40px 20px 70px 20px;
-            background: aliceblue;
+        .pwreset_logo{
+            font-family:Pacifico;
+            font-style:normal;
+            font-weight:normal;
+            font-size: 36px;
+            line-height:63px;
+            color:#262626;
         }
-        input[type=button] {
-            background:lightgrey;
-            width: 20%;
-            font-size: 20px;
-            font-weight: 900;
-            border-radius: 7px;
-            margin-left: 13px;
-            margin-top: 10px;
-  
+        #forc{
+            color:#0ABAB5
         }
-        input.lastline[type=button]{
-            background: purple;
+        .reset_body{
+            width: 50vw;
+            background:#FFFFFF;
+            border:1px solid #c4c4c4;
+            box-sizing: border-box;
+            border-radius: 6px;
         }
-        input.equalline[type=button]{
-            background: lime;
-            width: 93%;
+        #check_mail{
+            top:33px;
+            padding-left:15%;
+            padding-right:10%;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size:32px;
+            line-height:37px;
+            text-align:center;
+            color:#000000
         }
-        input[type=button]:active {
-            background-color: #3e8e41;
-            box-shadow: 0 5px #666;
-            transform: translateY(4px);
-        
+        #email_sent{
+            top:84px;
+            padding-left:15%;
+            padding-right:10%;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size:18px;
+            line-height:21px;
+            color:#262626;
         }
-        input[type=button]:hover {
-            background-color: #003300;
-            color: white;
+        #resend_instruction{
+            padding-left:30%;
+            top:180px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size:16px;
+            line-height:18px;
+            text-align:center;
+            color:#091429;
+        }
+        .align-left {
+            text-align: left;
         }
 
-        input[type = text] {
-            position: relative;
-            display: block;
-            width: 90%;
-            margin: 5px auto;
-            font-size: 20px;
-            padding: 10px;
-            box-shadow: 4px 0px 12px black inset;
-        }   
-        #calcname{
-            position: relative;
-            float: right;
-            margin-top: 15px;
+        .left-pad-4 {
+            margin-left: .4em;
         }
-        #calcname{
-            font-size: 20px;
-            font-weight: 900;
+
+        .centered-div {
+            margin: auto;
+            margin-top: 13%;
         }
-        
     </style>
 </head>
 <body>
-    <div id='calculator_container'>
-            <div id="calcname">
-                    <p>Kemi Richard</p>
-                  </div>
-        <form name="calculator">
-            <input type="text" name="result"/>
-            <br/>
-            <input type="button" value="1" onclick="calculator.result.value +='1'"/>
-            <input type="button" value="2" onclick="calculator.result.value +='2'"/>
-            <input type="button" value="3" onclick="calculator.result.value +='3'"/>
-            <input type="button" class="lastline" value="/" onclick="calculator.result.value +='/'"/>
-            <br/>
-            <input type="button" value="4" onclick="calculator.result.value +='4'"/>
-            <input type="button" value="5" onclick="calculator.result.value +='5'"/>
-            <input type="button" value="6" onclick="calculator.result.value +='6'"/>
-            <input type="button" class="lastline" value="x" onclick="calculator.result.value +='*'"/>
-            <br/>
-            <input type="button" value="7" onclick="calculator.result.value +='7'"/>
-            <input type="button" value="8" onclick="calculator.result.value +='8'"/>
-            <input type="button" value="9" onclick="calculator.result.value +='9'"/>
-            <input type="button" class="lastline" value="-" onclick="calculator.result.value +='-'"/>
-            <br/>
-            <input type="button" value="0" onclick="calculator.result.value +='0'"/>
-            <input type="button" value="." onclick="calculator.result.value +='.'"/>
-            <input type="button" value="c" onclick="calculator.result.value =''"/>
-            <input type="button" class="lastline" value="+" onclick="calculator.result.value +='+'"/>
-            <br/>
-            <input type="button" class="equalline" value="=" onclick="calculator.result.value = eval(calculator.result.value)"/>
-
-            <br/>
-
-        </form>
+    <div>
+        <span class="pwreset_logo align-left left-pad-4">Lan<span id="forc">c</span>ers</span>
+    </div>
+    <div class="reset_body centered-div">
+        <h3 id="check_mail">Please Check your mail</h3>
+        <p id="email_sent">An email has been sent to you with password reset instructions. Be sure to check your spam folder if you don't see it within five minutes</p>
+        <p id="resend_instruction">Resend Instructions?</p>
     </div>
 </body>
 </html>
